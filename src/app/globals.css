@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-paper: #fbfaf7;
+  --color-ink: #243a32;
+  --color-muted: #5d6a63;
+  --color-line: #dedfd7;
+  --color-accent: #365e49;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+}
+
+:root { color-scheme: light; }
+html { scroll-padding-top: 2rem; }
+body { margin: 0; background: var(--color-paper); color: var(--color-ink); }
+::selection { background: #dce8d9; }
+a { text-underline-offset: 0.22em; }
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 5px; border-radius: 2px; }
+.document-copy { color: #46544c; font-size: 1rem; line-height: 1.85; }
+.document-copy section + section { margin-top: 2.75rem; }
+.document-copy h2 { color: var(--color-ink); font-size: 1.3rem; font-weight: 600; letter-spacing: -0.025em; line-height: 1.4; margin-bottom: 0.9rem; }
+.document-copy h3 { color: var(--color-ink); font-weight: 600; margin: 1.5rem 0 0.5rem; }
+.document-copy p + p { margin-top: 1rem; }
+.document-copy ul, .document-copy ol { padding-left: 1.35rem; margin-top: 0.75rem; }
+.document-copy ul { list-style: disc; }
+.document-copy ol { list-style: decimal; }
+.document-copy li + li { margin-top: 0.45rem; }
+.document-copy a { color: var(--color-accent); text-decoration: underline; }
+.document-copy a:hover { text-decoration-thickness: 2px; }
+.document-copy strong { font-weight: 600; color: var(--color-ink); }
+details { border-bottom: 1px solid var(--color-line); padding: 1.2rem 0; }
+summary { cursor: pointer; color: var(--color-ink); font-weight: 600; line-height: 1.6; padding-right: 1rem; }
+details[open] summary { margin-bottom: 0.8rem; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }
